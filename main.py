@@ -70,6 +70,8 @@ def predict_megafon():
     con = mysql.connector.connect(host='localhost', user='web_user', password='1111', db='megafon')
     sql = f"select * from features where id = {dict_w['id']}"
     data_features = pd.read_sql(sql, con)
+    if data_features.shape[0] == 0:
+        return jsonify([0, 'Нет такого пользователя', 0])
     data_features.drop('index', axis=1, inplace=True)
     time_to_date_time = dict_w['time'].split('-')
     my_datetime = date(int(time_to_date_time[0]), int(time_to_date_time[1]), int(time_to_date_time[2]))
