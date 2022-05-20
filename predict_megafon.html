@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta lang="ru">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="css/script.js"></script>
+	<title>MyFirstSite</title>
+</head>
+<body>
+
+  
+
+  <div class="container">
+    <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-2 text-white"><b>Home</b></a></li>
+          <li><a href="family.html" class="nav-link px-2 text-white">Семья</a></li>
+          <li><a href="predict.html" class="nav-link px-2 text-white">Predict_fake</a></li>
+          <li><a href="predict_megafon.html" class="nav-link px-2 text-white">Predict_megafon</a></li>
+          <li><a href="#" class="nav-link px-2 text-white" onclick="loadPhones()">Test click</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        </ul>
+        <div class="nav col-md-4 justify-content-end">
+          <a class="nav-link text-white">Не уходи смиренно в сумрак вечной тьмы..</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="album py-5 bg-light" style="text-align: center;">
+    <h2><b>Рекомендация по подключению услуги абоненту мегафон. <br>курсовой проект!</b></h2>
+    <div class='row align-items-start wiew' style="padding-top: 50px; padding-bottom: 20px;">
+      <div class='col-md-4 result'>ID абонента <br>(из данных файла features.csv) <br>
+        <input id="ID"  placeholder="4234" autofocus>
+      </div>
+      <div class='col-md-4 result'>Месяц года когда будет предложена услуга <br>(формат ГГГГ-ММ-ДД)<br>
+        <input  id="time"  placeholder="2018-12-05">
+      </div>
+      <div class='col-md-4 result'>Текущая предлагаемая услуга <br>(1,2,4,5,6,7,8,9)<br>
+        <input  id="service"  placeholder="1">
+      </div>
+    </div>
+    <div class="row align-items-start wiew" style="padding-top: 50px; padding-bottom: 50px;">
+      <div class="col-md-4 result">
+        <p>Уверенность модели что <br> абонент подключит предлагаемую услугу: <br>(1-да, 0-нет/%) <br> </p>
+        <p id="result_predict_proba" style="color: red; font-weight: bold; font-size: 150%;">fsdfsfsd</div>
+      <div class="col-md-4 result">
+        <p>Наиболее рекомендуемая услуга <br> для подключения <br>(из 8 услуг в файле features.csv) :</p>
+        <p id="result_predict" style="color: red; font-weight: bold; font-size: 150%;">dgdfggdg</p>
+      </div>
+      
+      <div class="col-md-3 result">
+        <p>Рекомендация услуг слева направо <br> в порядке рекомендации модели <br>(указаны ID услуги)<br> </p>
+        <p id="result_list" style="color: red; font-weight: bold; font-size: 150%;">fsdfsfsd</div>
+        
+      </div>
+      </div>
+      
+    </div>
+      
+    <div class="row align-items-start wiew">
+      <div class="col-md-8"></div>
+      <div class="col-md-2"><button type="button" class="btn btn-warning border" style="width: 80%; height: 80%;" onclick="predicts_megafon()">GO</button></div>
+      <div class="col-md-2"><button type="button" class="btn btn-warning border" style="width: 80%; height: 80%;" onclick="clears()">Clear</button></div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top bg-dark">
+    <p class="col-md-4 mb-0 text-muted">© 2022 HomeCompany, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" id="result">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"></a></li>
+    </ul>
+  </footer>
+  </div>
+</body>
+</html>

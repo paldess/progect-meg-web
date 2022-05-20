@@ -1,0 +1,47 @@
+.main {
+	width: 90%;
+	height: 900px;
+	background-color: rgb(100, 150, 60);
+	margin-right: auto;
+	margin-left: auto;
+	background-color: black;
+}
+
+.photo {
+	width: 95%;
+	margin: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+.photo_k {
+	padding-top: 7%;
+	padding-bottom: 7%;
+	border-radius: 30px; 
+	background-color: rgb(224,224,224); 
+	width: 95%; height: 80%; 
+	margin-right: auto; 
+	margin-left: auto; 
+	text-align: center;
+	margin-bottom: auto;
+	margin-top: 10px;
+	object-fit: contain;  
+}
+.wiew {
+	padding: 15px;
+}
+#textar {
+	resize: none;
+	width: 95%;
+}
+.result {
+	height: 100px;
+}
+
+.english {
+	color: red;
+	font-size: 120%;
+	font-style: italic;
+}
