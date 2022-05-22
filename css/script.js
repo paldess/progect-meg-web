@@ -43,7 +43,7 @@ function clears() {
 function clears_2() {
   document.getElementById('result_predict').innerHTML = '';
   document.getElementById('result_predict_proba').innerHTML = '';
-  document.getElementById('result_predict_img').innerHTML = '';
+  document.getElementById('result_list').innerHTML = '';
 }
 
 function predicts_megafon() {
